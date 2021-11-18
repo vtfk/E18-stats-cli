@@ -17,6 +17,8 @@
     "standard": "16.0.4"
   },
   "dependencies": {
-    "commander": "8.3.0"
+    "@vtfk/e18-stats": "1.0.2",
+    "commander": "8.3.0",
+    "dotenv": "10.0.0"
   }
 }

@@ -1,16 +1,20 @@
 #! /usr/bin/env node
 
-const addStats = (options) => {
+require('dotenv').config()
+const { addStats } = require('@vtfk/e18-stats')
+const { program } = require('commander')
+
+const processStats = async options => {
   const stats = JSON.parse(options)
-  console.log(stats.system)
+  const result = addStats(stats)
+  console.log(result)
 }
 
-const { program } = require('commander')
 // add statistic to E18
 program
   .command('add <stats>')
   .description('Add statistic to E18')
-  .action(addStats)
+  .action(processStats)
 
 // parse commands
 program.parse()
