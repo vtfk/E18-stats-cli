@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "e18": "index.js"
+  },
   "scripts": {
     "test": "standard && jest && npm audit"
   },
@@ -12,5 +15,8 @@
   "devDependencies": {
     "jest": "27.3.1",
     "standard": "16.0.4"
+  },
+  "dependencies": {
+    "commander": "8.3.0"
   }
 }
